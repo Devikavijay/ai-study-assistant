@@ -27,6 +27,6 @@ EXIT_MESSAGE = (
 )
 
 ERROR_MESSAGE = (
-    "😔 Oops! I couldn't process your request.\n"
-    "Please check your internet connection and try again."
+    "😔 Oops! I couldn't process your request right now.\n"
+    "Please try again in a moment."
 )
