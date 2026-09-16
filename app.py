@@ -2,6 +2,7 @@ from google.genai import types
 from prompts import SYSTEM_PROMPT
 from config import client
 from messages import WELCOME_MESSAGE, EMPTY_MESSAGE, EXIT_MESSAGE, ERROR_MESSAGE
+from utils import is_exit_command, is_empty_input
 
 
 chat = client.chats.create(
@@ -17,11 +18,11 @@ while True:
 
     question = input("🧠 Ask LearnMate: ")
 
-    if question.strip().lower() == "exit":
+    if is_exit_command(question):
         print(EXIT_MESSAGE)
         break
 
-    if not question.strip():
+    if is_empty_input(question):
         print(EMPTY_MESSAGE)
         continue
     try:
