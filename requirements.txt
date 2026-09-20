@@ -1,4 +1,4 @@
-python-dotenv
-google-genai
-pytest
-streamlit
+python-dotenv==1.2.2
+google-genai==2.14.0
+pytest==9.1.1
+streamlit==1.64.0
